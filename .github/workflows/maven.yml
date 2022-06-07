@@ -24,4 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Accidentally upload to the same artifact via multiple jobs
+      uses: actions/upload-artifact@v3
+      with:
+        name: mavendemo-artifact
+        path: ${{ github.workspace }}
+    
    
