@@ -30,7 +30,7 @@ jobs:
         name: mavendemo-artifact
         path: ${{ github.workspace }}
     - name: Download a single artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: mavendemo-artifact
     
